@@ -55,15 +55,15 @@ jobs:
 
       # 6. 安装依赖（保证 lockfile 存在）
       - name: Install Dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       # 7. 编译项目
       - name: Build
-        run: pnpm -w run build --if-present
+        run: pnpm -w run build
 
       # 8. 运行测试
       - name: Test
-        run: pnpm -w run test --if-present
+        run: pnpm -w run test
 
       # 9. 创建 Git tag
       - name: Create Tag
