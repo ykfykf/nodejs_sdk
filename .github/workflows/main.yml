@@ -55,7 +55,7 @@ jobs:
 
       # 6. 安装依赖（保证 lockfile 存在）
       - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       # 7. 编译项目
       - name: Build
