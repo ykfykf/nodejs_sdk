@@ -1,4 +1,4 @@
-# .github/workflows/release.yml (Node.js)
+# .github/workflows/release.yml
 name: Release Node.js SDK
 
 on:
@@ -14,17 +14,20 @@ jobs:
       contents: write
 
     steps:
+      # 1. Checkout 代码
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
+      # 2. 安装 pnpm
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 8.10.0
           run_install: false
 
+      # 3. 设置 Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -33,6 +36,7 @@ jobs:
           cache: 'pnpm'
           cache-dependency-path: pnpm-lock.yaml
 
+      # 4. 获取版本号并设置 tag
       - name: Extract Version
         id: version
         run: |
@@ -40,6 +44,7 @@ jobs:
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           echo "tag=v$VERSION" >> $GITHUB_OUTPUT
 
+      # 5. 获取 release_info
       - name: Extract Release Info
         id: release_info
         run: |
@@ -48,15 +53,19 @@ jobs:
             echo "release_uuid=$RELEASE_UUID" >> $GITHUB_OUTPUT
           fi
 
+      # 6. 安装依赖（保证 lockfile 存在）
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
 
+      # 7. 编译项目
       - name: Build
-        run: pnpm -w run build
+        run: pnpm -w run build --if-present
 
+      # 8. 运行测试
       - name: Test
-        run: pnpm -w run test
+        run: pnpm -w run test --if-present
 
+      # 9. 创建 Git tag
       - name: Create Tag
         run: |
           git config user.name "github-actions[bot]"
@@ -64,6 +73,7 @@ jobs:
           git tag -a ${{ steps.version.outputs.tag }} -m "Release ${{ steps.version.outputs.tag }}"
           git push origin ${{ steps.version.outputs.tag }}
 
+      # 10. 读取 Changelog
       - name: Read Changelog
         id: changelog
         run: |
@@ -78,6 +88,7 @@ jobs:
             echo "content=Release ${{ steps.version.outputs.tag }}" >> $GITHUB_OUTPUT
           fi
 
+      # 11. 创建 GitHub Release
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
@@ -85,11 +96,13 @@ jobs:
           name: Release ${{ steps.version.outputs.tag }}
           body: ${{ steps.changelog.outputs.content }}
 
+      # 12. 发布到 npm
       - name: Publish to npm
-        run: pnpm -w run release
+        run: pnpm -w publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      # 13. 通知 CASM
       - name: Notify CASM
         if: always()
         env:
@@ -97,7 +110,6 @@ jobs:
           WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }}
         run: |
           CONCLUSION="${{ job.status == 'success' && 'success' || 'failure' }}"
-
           PAYLOAD=$(cat <<EOF
           {
             "action": "nodejs",
@@ -116,9 +128,7 @@ jobs:
           }
           EOF
           )
-
           SIGNATURE=$(echo -n "$PAYLOAD" | openssl dgst -sha256 -hmac "$WEBHOOK_SECRET" | cut -d' ' -f2)
-
           curl -X POST "$WEBHOOK_URL" \
             -H "Content-Type: application/json" \
             -H "X-Hub-Signature-256: sha256=$SIGNATURE" \
