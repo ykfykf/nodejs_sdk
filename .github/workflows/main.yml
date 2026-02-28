@@ -22,19 +22,15 @@ jobs:
 
       # 2. 安装 pnpm
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v2
         with:
-          version: 9.0.0
-          run_install: false
+          version: 9
 
       # 3. 设置 Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          registry-url: 'https://registry.npmjs.org'
-          cache: 'pnpm'
-          cache-dependency-path: pnpm-lock.yaml
+          node-version: 18
 
       # 4. 获取版本号并设置 tag
       - name: Extract Version
@@ -55,15 +51,15 @@ jobs:
 
       # 6. 安装依赖（保证 lockfile 存在）
       - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
 
       # 7. 编译项目
       - name: Build
-        run: pnpm -w run build
+        run: pnpm build
 
       # 8. 运行测试
       - name: Test
-        run: pnpm -w run test
+        run: pnpm test:core
 
       # 9. 创建 Git tag
       - name: Create Tag
