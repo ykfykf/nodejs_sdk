@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandOutput } from '@volcengine/sdk-core';
+import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandOutput } from 'volc-test-sdk-core';
 
 import { BatchBlockIPRequest } from './types/index';
 import { BatchBlockIPResponse } from './types/index';

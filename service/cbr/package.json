@@ -1,7 +1,7 @@
 {
-  "name": "@volcengine/cbr",
+  "name": "volc-test-cbr",
   "version": "1.0.2",
-  "description": "swagger client for @volcengine/cbr",
+  "description": "swagger client for volc-test-cbr",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",
@@ -24,7 +24,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@volcengine/sdk-core": "workspace:*"
+    "volc-test-sdk-core": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^20.8.0",

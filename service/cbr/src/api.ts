@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandOutput } from '@volcengine/sdk-core';
+import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandOutput } from 'volc-test-sdk-core';
 
 import { CreateBackupJobRequest } from './types/index';
 import { CreateBackupJobResponse } from './types/index';

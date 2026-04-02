@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandOutput } from '@volcengine/sdk-core';
+import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandOutput } from 'volc-test-sdk-core';
 
 import { AssociateAccountGroupPrincipalsRequest } from './types/index';
 import { AssociateAccountGroupPrincipalsResponse } from './types/index';

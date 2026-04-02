@@ -1,11 +1,20 @@
-# .github/workflows/release.yml
+# .github/workflows/main.yml
 name: Release Node.js SDK
 
 on:
-  workflow_dispatch:
   push:
-    branches: [master]
-    paths-ignore: ['**.md', '.gitignore', 'LICENSE']
+    branches: [master, feat/release]
+    paths-ignore: ["**.md", ".gitignore", "LICENSE"]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry-run mode (simulate publish without actually pushing to npm)"
+        type: boolean
+        default: true
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   release:
@@ -14,7 +23,7 @@ jobs:
       contents: write
 
     steps:
-      # 1. Checkout 代码
+      # 1. Checkout 代码（含完整历史，用于 tag 操作）
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -24,23 +33,16 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 9
+          version: 9.15.4
 
       # 3. 设置 Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
+          registry-url: "https://registry.npmjs.org"
 
-      # 4. 获取版本号并设置 tag
-      - name: Extract Version
-        id: version
-        run: |
-          VERSION=$(node -p "require('./package.json').version")
-          echo "version=$VERSION" >> $GITHUB_OUTPUT
-          echo "tag=v$VERSION" >> $GITHUB_OUTPUT
-
-      # 5. 获取 release_info
+      # 4. 获取 release_info（供 CASM 通知使用）
       - name: Extract Release Info
         id: release_info
         run: |
@@ -49,83 +51,65 @@ jobs:
             echo "release_uuid=$RELEASE_UUID" >> $GITHUB_OUTPUT
           fi
 
-      # 6. 安装依赖（保证 lockfile 存在）
+      # 5. 安装依赖
       - name: Install Dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
-      # 7. 编译项目
+      # 6. 编译项目（先 core 后 service，turbo 根据 dependsOn 自动处理顺序）
       - name: Build
         run: pnpm build
 
-      # 8. 运行测试
+      # 7. 运行测试
       - name: Test
-        run: pnpm test:core
+        run: pnpm test
 
-      # 9. 创建 Git tag
-      - name: Create Tag
+      # 9. 发布包（core + service）
+      #    - 前置检测版本是否已存在，已存在则跳过
+      #    - 发布成功后自动打 tag（格式：包名@版本）
+      #    - 内置 npm 频率限制重试和包闶延迟
+      - name: Publish packages
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git tag -a ${{ steps.version.outputs.tag }} -m "Release ${{ steps.version.outputs.tag }}"
-          git push origin ${{ steps.version.outputs.tag }}
-
-      # 10. 读取 Changelog
-      - name: Read Changelog
-        id: changelog
-        run: |
-          CHANGELOG_FILE=".changelog/${{ steps.version.outputs.tag }}.md"
-          if [ -f "$CHANGELOG_FILE" ]; then
-            delimiter="$(openssl rand -hex 8)"
-            echo "content<<$delimiter" >> $GITHUB_OUTPUT
-            cat "$CHANGELOG_FILE" >> $GITHUB_OUTPUT
-            echo "" >> $GITHUB_OUTPUT
-            echo "$delimiter" >> $GITHUB_OUTPUT
-          else
-            echo "content=Release ${{ steps.version.outputs.tag }}" >> $GITHUB_OUTPUT
-          fi
-
-      # 11. 创建 GitHub Release
-      - name: Create Release
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: ${{ steps.version.outputs.tag }}
-          name: Release ${{ steps.version.outputs.tag }}
-          body: ${{ steps.changelog.outputs.content }}
-
-      # 12. 发布到 npm
-      - name: Publish to npm
-        run: pnpm -w publish --access public
+          chmod +x scripts/publish.sh
+          bash scripts/publish.sh
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && 'true' || 'false' }}
 
-      # 13. 通知 CASM
+      # 10. 通知 CASM
       - name: Notify CASM
-        if: always()
+        if: ${{ always() && !(github.event_name == 'workflow_dispatch' && inputs.dry_run) }}
         env:
           WEBHOOK_URL: ${{ secrets.CASM_WEBHOOK_URL }}
           WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }}
         run: |
           CONCLUSION="${{ job.status == 'success' && 'success' || 'failure' }}"
-          PAYLOAD=$(cat <<EOF
-          {
-            "action": "nodejs",
-            "workflow_run": {
-              "id": ${{ github.run_id }},
-              "name": "${{ github.workflow }}",
-              "conclusion": "$CONCLUSION",
-              "head_branch": "${{ github.ref_name }}",
-              "head_sha": "${{ github.sha }}",
-              "html_url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}",
-              "release_uuid": "${{ steps.release_info.outputs.release_uuid }}"
-            },
-            "repository": {
-              "full_name": "${{ github.repository }}"
-            }
-          }
-          EOF
-          )
+          PAYLOAD=$(jq -n \
+            --arg action "nodejs" \
+            --argjson run_id "${{ github.run_id }}" \
+            --arg name "${{ github.workflow }}" \
+            --arg conclusion "$CONCLUSION" \
+            --arg branch "${{ github.ref_name }}" \
+            --arg sha "${{ github.sha }}" \
+            --arg html_url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            --arg release_uuid "${{ steps.release_info.outputs.release_uuid }}" \
+            --arg repo "${{ github.repository }}" \
+            '{
+              action: $action,
+              workflow_run: {
+                id: $run_id,
+                name: $name,
+                conclusion: $conclusion,
+                head_branch: $branch,
+                head_sha: $sha,
+                html_url: $html_url,
+                release_uuid: $release_uuid
+              },
+              repository: {
+                full_name: $repo
+              }
+            }')
           SIGNATURE=$(echo -n "$PAYLOAD" | openssl dgst -sha256 -hmac "$WEBHOOK_SECRET" | cut -d' ' -f2)
-          curl -X POST "$WEBHOOK_URL" \
+          curl -sf -X POST "$WEBHOOK_URL" \
             -H "Content-Type: application/json" \
             -H "X-Hub-Signature-256: sha256=$SIGNATURE" \
             -H "X-TT-ENV: boe_githubaction" \

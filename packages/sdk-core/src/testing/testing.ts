@@ -6,7 +6,7 @@
  *
  * @example
  * ```typescript
- * import { MockRequestHandler, MockClock } from '@volcengine/sdk-core/testing';
+ * import { MockRequestHandler, MockClock } from 'volc-test-sdk-core/testing';
  *
  * const mockHandler = new MockRequestHandler();
  * mockHandler.mock('https://api.example.com', {

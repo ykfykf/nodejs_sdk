@@ -1,7 +1,7 @@
 {
-  "name": "@volcengine/nta",
+  "name": "volc-test-nta",
   "version": "1.0.1",
-  "description": "swagger client for @volcengine/nta",
+  "description": "swagger client for volc-test-nta",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",
@@ -24,7 +24,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@volcengine/sdk-core": "workspace:*"
+    "volc-test-sdk-core": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^20.8.0",

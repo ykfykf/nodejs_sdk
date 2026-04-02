@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandOutput } from '@volcengine/sdk-core';
+import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandOutput } from 'volc-test-sdk-core';
 
 import { DeleteTaskRequest } from './types/index';
 import { DeleteTaskResponse } from './types/index';
@@ -43,7 +43,7 @@ export type StopTaskCommandOutput = CommandOutput<StopTaskResponse>;
 // ============================================================================
 // CommandOutputMap Extensions via Declaration Merging
 // ============================================================================
-declare module '@volcengine/sdk-core' {
+declare module 'volc-test-sdk-core' {
   interface CommandOutputMap {
     DeleteTaskCommand: DeleteTaskCommandOutput;
     GetTaskCommand: GetTaskCommandOutput;

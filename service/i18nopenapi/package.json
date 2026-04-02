@@ -1,7 +1,7 @@
 {
-  "name": "@volcengine/i18nopenapi",
+  "name": "volc-test-i18nopenapi",
   "version": "1.0.3",
-  "description": "swagger client for @volcengine/i18nopenapi",
+  "description": "swagger client for volc-test-i18nopenapi",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",
@@ -24,7 +24,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@volcengine/sdk-core": "workspace:*"
+    "volc-test-sdk-core": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^20.8.0",

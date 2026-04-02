@@ -1,7 +1,7 @@
 {
-  "name": "@volcengine/billing",
+  "name": "volc-test-billing",
   "version": "1.0.2",
-  "description": "swagger client for @volcengine/billing",
+  "description": "swagger client for volc-test-billing",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",
@@ -24,7 +24,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@volcengine/sdk-core": "workspace:*"
+    "volc-test-sdk-core": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^20.8.0",
