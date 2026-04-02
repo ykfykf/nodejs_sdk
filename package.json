@@ -13,7 +13,6 @@
   "scripts": {
     "build": "turbo run build --filter='./packages/sdk-core' --filter='./service/*'",
     "build:core": "turbo run build --filter='./packages/sdk-core'",
-    "build:service": "turbo run build --filter='./service/*'",
     "test": "turbo run test",
     "test:core": "turbo run test --filter='./packages/*'",
     "clean": "turbo run clean",
