@@ -11,7 +11,7 @@ set -euo pipefail
 DRY_RUN="${DRY_RUN:-false}"
 MAX_RETRIES=3
 RETRY_DELAY=30         # 被限流时等待秒数
-PUBLISH_DELAY=8        # 每个包之间的间隔秒数（避免触发限流）
+PUBLISH_DELAY=30        # 每个包之间的间隔秒数（避免触发限流）
 FAILED_PACKAGES=()
 SKIPPED_PACKAGES=()
 PUBLISHED_PACKAGES=()
