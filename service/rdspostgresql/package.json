@@ -33,5 +33,9 @@
   "sideEffects": false,
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
-  }
+  },
+  "files": [
+    "dist",
+    "!dist/tsconfig.tsbuildinfo"
+  ]
 }
