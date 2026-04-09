@@ -69,8 +69,8 @@ jobs:
       #    - 内置 npm 频率限制重试和包闶延迟
       - name: Publish packages
         run: |
-          chmod +x scripts/publish.sh
-          bash scripts/publish.sh
+          chmod +x scripts/publish.js
+          node scripts/publish.js
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && 'true' || 'false' }}
