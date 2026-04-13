@@ -1,4 +1,4 @@
-# volc-test-rdsmssql
+# volc-rdsmssql
 
 ## 1.0.2
 

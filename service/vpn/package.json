@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-vpn",
+  "name": "volc-vpn",
   "version": "1.0.2",
-  "description": "swagger client for volc-test-vpn",
+  "description": "swagger client for volc-vpn",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

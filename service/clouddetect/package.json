@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-clouddetect",
+  "name": "volc-clouddetect",
   "version": "1.0.2",
-  "description": "swagger client for volc-test-clouddetect",
+  "description": "swagger client for volc-clouddetect",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-clb",
+  "name": "volc-clb",
   "version": "1.0.3",
-  "description": "swagger client for volc-test-clb",
+  "description": "swagger client for volc-clb",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

@@ -1,4 +1,4 @@
-# volc-test-cen
+# volc-cen
 
 ## 1.0.2
 

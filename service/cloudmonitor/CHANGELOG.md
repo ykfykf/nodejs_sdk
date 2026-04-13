@@ -1,4 +1,4 @@
-# volc-test-cloudmonitor
+# volc-cloudmonitor
 
 ## 1.0.2
 

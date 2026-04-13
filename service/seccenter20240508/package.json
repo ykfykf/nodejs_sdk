@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-seccenter20240508",
+  "name": "volc-seccenter20240508",
   "version": "1.0.2",
-  "description": "swagger client for volc-test-seccenter20240508",
+  "description": "swagger client for volc-seccenter20240508",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

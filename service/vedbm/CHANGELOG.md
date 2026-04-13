@@ -1,4 +1,4 @@
-# volc-test-vedbm
+# volc-vedbm
 
 ## 1.0.2
 

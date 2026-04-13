@@ -1,4 +1,4 @@
-# volc-test-natgateway
+# volc-natgateway
 
 ## 1.0.2
 

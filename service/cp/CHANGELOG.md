@@ -1,4 +1,4 @@
-# volc-test-cp
+# volc-cp
 
 ## 1.0.2
 

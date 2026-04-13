@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-kms",
+  "name": "volc-kms",
   "version": "1.0.3",
-  "description": "swagger client for volc-test-kms",
+  "description": "swagger client for volc-kms",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

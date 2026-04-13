@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-autoscaling",
+  "name": "volc-autoscaling",
   "version": "1.0.2",
-  "description": "swagger client for volc-test-autoscaling",
+  "description": "swagger client for volc-autoscaling",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

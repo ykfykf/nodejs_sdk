@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-edx",
+  "name": "volc-edx",
   "version": "1.0.2",
-  "description": "swagger client for volc-test-edx",
+  "description": "swagger client for volc-edx",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

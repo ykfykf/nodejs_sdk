@@ -1,4 +1,4 @@
-# volc-test-storageebs
+# volc-storageebs
 
 ## 1.0.2
 

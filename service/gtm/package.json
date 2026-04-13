@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-gtm",
+  "name": "volc-gtm",
   "version": "1.0.2",
-  "description": "swagger client for volc-test-gtm",
+  "description": "swagger client for volc-gtm",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

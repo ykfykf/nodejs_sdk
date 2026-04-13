@@ -1,4 +1,4 @@
-# volc-test-cbr
+# volc-cbr
 
 ## 1.0.3
 

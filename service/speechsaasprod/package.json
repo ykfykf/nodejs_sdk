@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-speechsaasprod",
+  "name": "volc-speechsaasprod",
   "version": "1.0.2",
-  "description": "swagger client for volc-test-speechsaasprod",
+  "description": "swagger client for volc-speechsaasprod",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

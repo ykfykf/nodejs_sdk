@@ -1,4 +1,4 @@
-# volc-test-graph
+# volc-graph
 
 ## 1.0.2
 

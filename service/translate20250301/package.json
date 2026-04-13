@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-translate20250301",
+  "name": "volc-translate20250301",
   "version": "1.0.2",
-  "description": "swagger client for volc-test-translate20250301",
+  "description": "swagger client for volc-translate20250301",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

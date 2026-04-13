@@ -1,4 +1,4 @@
-# volc-test-rabbitmq
+# volc-rabbitmq
 
 ## 1.0.2
 

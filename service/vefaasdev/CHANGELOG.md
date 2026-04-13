@@ -1,4 +1,4 @@
-# volc-test-vefaasdev
+# volc-vefaasdev
 
 ## 1.0.2
 

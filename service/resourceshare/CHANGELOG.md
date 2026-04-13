@@ -1,4 +1,4 @@
-# volc-test-resourceshare
+# volc-resourceshare
 
 ## 1.0.2
 

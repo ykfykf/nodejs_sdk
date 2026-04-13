@@ -1,4 +1,4 @@
-# volc-test-hbase
+# volc-hbase
 
 ## 1.0.2
 

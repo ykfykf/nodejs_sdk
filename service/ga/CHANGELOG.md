@@ -1,4 +1,4 @@
-# volc-test-ga
+# volc-ga
 
 ## 1.0.2
 

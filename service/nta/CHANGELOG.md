@@ -1,4 +1,4 @@
-# volc-test-nta
+# volc-nta
 
 ## 1.0.2
 

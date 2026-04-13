@@ -1,4 +1,4 @@
-# volc-test-ark
+# volc-ark
 
 ## 1.0.2
 

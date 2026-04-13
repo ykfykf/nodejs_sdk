@@ -1,4 +1,4 @@
-# volc-test-dms
+# volc-dms
 
 ## 1.0.2
 

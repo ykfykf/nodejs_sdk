@@ -1,4 +1,4 @@
-# volc-test-redis
+# volc-redis
 
 ## 1.0.3
 

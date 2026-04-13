@@ -1,4 +1,4 @@
-# volc-test-cdn
+# volc-cdn
 
 ## 1.0.2
 

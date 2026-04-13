@@ -1,4 +1,4 @@
-# volc-test-sts
+# volc-sts
 
 ## 1.0.2
 

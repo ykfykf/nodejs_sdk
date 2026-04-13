@@ -1,4 +1,4 @@
-# volc-test-rdsmysqlv2
+# volc-rdsmysqlv2
 
 ## 1.0.2
 

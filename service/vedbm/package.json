@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-vedbm",
+  "name": "volc-vedbm",
   "version": "1.0.2",
-  "description": "swagger client for volc-test-vedbm",
+  "description": "swagger client for volc-vedbm",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

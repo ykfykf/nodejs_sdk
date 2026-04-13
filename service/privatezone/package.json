@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-privatezone",
+  "name": "volc-privatezone",
   "version": "1.0.2",
-  "description": "swagger client for volc-test-privatezone",
+  "description": "swagger client for volc-privatezone",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

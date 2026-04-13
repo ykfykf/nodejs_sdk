@@ -1,4 +1,4 @@
-# volc-test-volcobserve
+# volc-volcobserve
 
 ## 1.0.2
 

@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-tis",
+  "name": "volc-tis",
   "version": "1.0.4",
-  "description": "swagger client for volc-test-tis",
+  "description": "swagger client for volc-tis",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

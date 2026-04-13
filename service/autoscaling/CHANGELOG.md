@@ -1,4 +1,4 @@
-# volc-test-autoscaling
+# volc-autoscaling
 
 ## 1.0.2
 

@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-bytehousece20240831",
+  "name": "volc-bytehousece20240831",
   "version": "1.0.2",
-  "description": "swagger client for volc-test-bytehousece20240831",
+  "description": "swagger client for volc-bytehousece20240831",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

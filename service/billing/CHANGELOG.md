@@ -1,4 +1,4 @@
-# volc-test-billing
+# volc-billing
 
 ## 1.0.3
 

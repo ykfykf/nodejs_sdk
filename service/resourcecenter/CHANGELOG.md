@@ -1,4 +1,4 @@
-# volc-test-resourcecenter
+# volc-resourcecenter
 
 ## 1.0.2
 

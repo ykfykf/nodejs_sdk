@@ -1,4 +1,4 @@
-# volc-test-privatezone
+# volc-privatezone
 
 ## 1.0.2
 

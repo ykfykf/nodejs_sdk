@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-cp",
+  "name": "volc-cp",
   "version": "1.0.2",
-  "description": "swagger client for volc-test-cp",
+  "description": "swagger client for volc-cp",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

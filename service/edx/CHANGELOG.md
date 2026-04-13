@@ -1,4 +1,4 @@
-# volc-test-edx
+# volc-edx
 
 ## 1.0.2
 

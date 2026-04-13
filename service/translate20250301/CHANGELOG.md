@@ -1,4 +1,4 @@
-# volc-test-translate20250301
+# volc-translate20250301
 
 ## 1.0.2
 

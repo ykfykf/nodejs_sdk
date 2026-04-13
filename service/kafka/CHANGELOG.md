@@ -1,4 +1,4 @@
-# volc-test-kafka
+# volc-kafka
 
 ## 1.0.2
 

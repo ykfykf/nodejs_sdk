@@ -1,4 +1,4 @@
-# volc-test-wtn
+# volc-wtn
 
 ## 1.0.2
 

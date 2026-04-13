@@ -1,4 +1,4 @@
-# volc-test-bmq
+# volc-bmq
 
 ## 1.0.2
 

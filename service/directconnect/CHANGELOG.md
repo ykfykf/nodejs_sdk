@@ -1,4 +1,4 @@
-# volc-test-directconnect
+# volc-directconnect
 
 ## 1.0.2
 

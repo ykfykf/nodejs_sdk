@@ -1,4 +1,4 @@
-# volc-test-kms
+# volc-kms
 
 ## 1.0.3
 

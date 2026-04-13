@@ -1,4 +1,4 @@
-# volc-test-rocketmq
+# volc-rocketmq
 
 ## 1.0.2
 

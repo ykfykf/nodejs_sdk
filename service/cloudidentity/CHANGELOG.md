@@ -1,4 +1,4 @@
-# volc-test-cloudidentity
+# volc-cloudidentity
 
 ## 1.0.2
 

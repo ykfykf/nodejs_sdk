@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-acep",
+  "name": "volc-acep",
   "version": "1.0.3",
-  "description": "swagger client for volc-test-acep",
+  "description": "swagger client for volc-acep",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

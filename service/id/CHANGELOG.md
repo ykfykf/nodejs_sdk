@@ -1,4 +1,4 @@
-# volc-test-id
+# volc-id
 
 ## 1.0.2
 

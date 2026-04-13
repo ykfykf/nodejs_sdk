@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-aiotvideo20231001",
+  "name": "volc-aiotvideo20231001",
   "version": "1.0.2",
-  "description": "swagger client for volc-test-aiotvideo20231001",
+  "description": "swagger client for volc-aiotvideo20231001",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

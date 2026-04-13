@@ -1,4 +1,4 @@
-# volc-test-dns
+# volc-dns
 
 ## 1.0.2
 

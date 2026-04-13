@@ -1,4 +1,4 @@
-# volc-test-iam
+# volc-iam
 
 ## 1.0.3
 

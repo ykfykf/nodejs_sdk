@@ -1,4 +1,4 @@
-# volc-test-smc
+# volc-smc
 
 ## 1.0.2
 

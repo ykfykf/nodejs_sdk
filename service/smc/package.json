@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-smc",
+  "name": "volc-smc",
   "version": "1.0.2",
-  "description": "swagger client for volc-test-smc",
+  "description": "swagger client for volc-smc",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

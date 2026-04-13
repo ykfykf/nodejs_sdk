@@ -1,4 +1,4 @@
-# volc-test-milvus
+# volc-milvus
 
 ## 1.0.2
 

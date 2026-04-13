@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-kafka",
+  "name": "volc-kafka",
   "version": "1.0.2",
-  "description": "swagger client for volc-test-kafka",
+  "description": "swagger client for volc-kafka",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

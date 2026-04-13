@@ -1,4 +1,4 @@
-# volc-test-vpn
+# volc-vpn
 
 ## 1.0.2
 

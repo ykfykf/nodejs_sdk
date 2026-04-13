@@ -1,4 +1,4 @@
-# volc-test-flink20250101
+# volc-flink20250101
 
 ## 1.0.2
 

@@ -1,4 +1,4 @@
-# volc-test-clb
+# volc-clb
 
 ## 1.0.3
 

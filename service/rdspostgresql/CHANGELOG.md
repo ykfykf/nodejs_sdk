@@ -1,4 +1,4 @@
-# volc-test-rdspostgresql
+# volc-rdspostgresql
 
 ## 1.0.2
 

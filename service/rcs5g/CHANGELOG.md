@@ -1,4 +1,4 @@
-# volc-test-rcs5g
+# volc-rcs5g
 
 ## 1.0.2
 

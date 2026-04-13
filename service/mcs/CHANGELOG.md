@@ -1,4 +1,4 @@
-# volc-test-mcs
+# volc-mcs
 
 ## 1.0.2
 

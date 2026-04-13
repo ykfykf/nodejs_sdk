@@ -1,4 +1,4 @@
-# volc-test-sqs
+# volc-sqs
 
 ## 1.0.2
 

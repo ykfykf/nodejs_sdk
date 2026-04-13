@@ -1,4 +1,4 @@
-# volc-test-privatelink
+# volc-privatelink
 
 ## 1.0.2
 

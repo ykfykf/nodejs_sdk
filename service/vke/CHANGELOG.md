@@ -1,4 +1,4 @@
-# volc-test-vke
+# volc-vke
 
 ## 1.0.2
 

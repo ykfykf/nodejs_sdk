@@ -1,4 +1,4 @@
-# volc-test-vmp
+# volc-vmp
 
 ## 1.0.2
 

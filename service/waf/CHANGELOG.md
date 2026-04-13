@@ -1,4 +1,4 @@
-# volc-test-waf
+# volc-waf
 
 ## 1.0.2
 

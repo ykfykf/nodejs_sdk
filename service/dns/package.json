@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-dns",
+  "name": "volc-dns",
   "version": "1.0.2",
-  "description": "swagger client for volc-test-dns",
+  "description": "swagger client for volc-dns",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

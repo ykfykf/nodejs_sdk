@@ -1,4 +1,4 @@
-# volc-test-organization
+# volc-organization
 
 ## 1.0.2
 

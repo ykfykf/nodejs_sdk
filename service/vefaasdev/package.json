@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-vefaasdev",
+  "name": "volc-vefaasdev",
   "version": "1.0.2",
-  "description": "swagger client for volc-test-vefaasdev",
+  "description": "swagger client for volc-vefaasdev",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

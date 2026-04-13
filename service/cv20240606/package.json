@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-cv20240606",
+  "name": "volc-cv20240606",
   "version": "1.0.2",
-  "description": "swagger client for volc-test-cv20240606",
+  "description": "swagger client for volc-cv20240606",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

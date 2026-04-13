@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-secagent",
+  "name": "volc-secagent",
   "version": "1.0.2",
-  "description": "swagger client for volc-test-secagent",
+  "description": "swagger client for volc-secagent",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

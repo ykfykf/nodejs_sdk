@@ -1,4 +1,4 @@
-# volc-test-clouddetect
+# volc-clouddetect
 
 ## 1.0.2
 

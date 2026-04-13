@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-mcdn",
+  "name": "volc-mcdn",
   "version": "1.0.2",
-  "description": "swagger client for volc-test-mcdn",
+  "description": "swagger client for volc-mcdn",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

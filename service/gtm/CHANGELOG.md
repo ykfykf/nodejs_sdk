@@ -1,4 +1,4 @@
-# volc-test-gtm
+# volc-gtm
 
 ## 1.0.2
 

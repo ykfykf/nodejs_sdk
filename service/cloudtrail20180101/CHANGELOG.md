@@ -1,4 +1,4 @@
-# volc-test-cloudtrail20180101
+# volc-cloudtrail20180101
 
 ## 1.0.2
 

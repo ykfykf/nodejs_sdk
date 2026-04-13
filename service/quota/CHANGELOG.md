@@ -1,4 +1,4 @@
-# volc-test-quota
+# volc-quota
 
 ## 1.0.2
 

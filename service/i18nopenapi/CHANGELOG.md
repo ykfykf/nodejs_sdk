@@ -1,4 +1,4 @@
-# volc-test-i18nopenapi
+# volc-i18nopenapi
 
 ## 1.0.4
 

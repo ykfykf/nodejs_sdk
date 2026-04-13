@@ -1,4 +1,4 @@
-# volc-test-seccenter
+# volc-seccenter
 
 ## 1.0.2
 

@@ -1,4 +1,4 @@
-# volc-test-dbw
+# volc-dbw
 
 ## 1.0.2
 

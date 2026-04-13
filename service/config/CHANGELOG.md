@@ -1,4 +1,4 @@
-# volc-test-config
+# volc-config
 
 ## 1.0.2
 

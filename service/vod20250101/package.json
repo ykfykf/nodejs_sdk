@@ -1,7 +1,7 @@
 {
-  "name": "volc-test-vod20250101",
+  "name": "volc-vod20250101",
   "version": "1.0.3",
-  "description": "swagger client for volc-test-vod20250101",
+  "description": "swagger client for volc-vod20250101",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",
