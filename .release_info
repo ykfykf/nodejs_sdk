@@ -1,5 +1,5 @@
 {
-    "release_uuid": "15e7fcc6-f59c-4dd6-b3a3-0ad32b3ab464",
-    "integration_branch": "integration_20260127_Golang",
-    "generated_at": "2026-01-27T19:30:00+08:00"
+    "release_uuid": "1cedc5f4-ea21-48cb-ba6f-b61a6147f7ac",
+    "integration_branch": "feat/release",
+    "generated_at": "2026-04-13T19:47:42+08:00"
 }

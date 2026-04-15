@@ -16,7 +16,7 @@ const fs = require("fs");
 const DRY_RUN = process.env.DRY_RUN === "true";
 const MAX_RETRIES = 3;
 const RETRY_DELAY = 60; // 网络瞬时错误重试间隔（秒）
-const PUBLISH_DELAY = 60; // 同批次内包间间隔（秒）
+const PUBLISH_DELAY = 120; // 同批次内包间间隔（秒）
 const BATCH_SIZE = 20; // 每批最多发布包数（留 buffer，npm 硬限 ~25）
 const BATCH_COOLDOWN = 600; // 批次间冷却时间（秒），默认 10 分钟
 
