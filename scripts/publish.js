@@ -63,7 +63,7 @@ function isAlreadyPublished(output) {
  */
 function versionExists(pkgName, pkgVersion) {
   try {
-    execSync(`npm view "${pkgName}@${pkgVersion}" version`, {
+    execSync(`npm view "${pkgName}@${pkgVersion}" version --registry https://registry.npmjs.org/`, {
       stdio: "pipe",
     });
     return true;
@@ -89,8 +89,8 @@ function readPkgMeta(pkgDir) {
  */
 async function publishWithRetry(pkgDir, pkgName, pkgVersion) {
   const publishCmd = DRY_RUN
-    ? "pnpm publish --access public --dry-run"
-    : "pnpm publish --access public";
+    ? "pnpm publish --access public --no-git-checks --dry-run"
+    : "pnpm publish --access public --no-git-checks";
 
   for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
     const dryLabel = DRY_RUN ? " [DRY-RUN]" : "";
