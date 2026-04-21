@@ -1,6 +1,6 @@
 {
   "name": "volc-rcs5g",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "swagger client for volc-rcs5g",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",

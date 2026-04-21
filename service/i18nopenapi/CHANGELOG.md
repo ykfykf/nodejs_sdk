@@ -1,5 +1,11 @@
 # volc-i18nopenapi
 
+## 1.0.5
+
+### Patch Changes
+
+- test
+
 ## 1.0.4
 
 ### Patch Changes

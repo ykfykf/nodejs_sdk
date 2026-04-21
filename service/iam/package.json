@@ -1,6 +1,6 @@
 {
   "name": "volc-iam",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "swagger client for volc-iam",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",

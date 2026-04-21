@@ -89,8 +89,8 @@ function readPkgMeta(pkgDir) {
  */
 async function publishWithRetry(pkgDir, pkgName, pkgVersion) {
   const publishCmd = DRY_RUN
-    ? "npm publish --access public --dry-run"
-    : "npm publish --access public";
+    ? "pnpm publish --access public --dry-run"
+    : "pnpm publish --access public";
 
   for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
     const dryLabel = DRY_RUN ? " [DRY-RUN]" : "";

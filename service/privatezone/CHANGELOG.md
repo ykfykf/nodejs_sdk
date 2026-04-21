@@ -1,5 +1,11 @@
 # volc-privatezone
 
+## 1.0.3
+
+### Patch Changes
+
+- test
+
 ## 1.0.2
 
 ### Patch Changes
